@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Rock+Salt');
+
+
+
+body{
+    background-color: #fff;
+    text-align: center;
+}
+
+.Outfit-1{
+    margin: 20px 20px 80px 30px;
+}
+.Outfit-2 {
+    margin-bottom: 80px;
+}
+.des-1{
+    margin-bottom: 30px;
+}
+.des{
+    margin-bottom: 30px;
+}
