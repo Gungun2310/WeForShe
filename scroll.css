@@ -19,3 +19,20 @@ body{
 .des{
     margin-bottom: 30px;
 }
+.hidden {
+    display: none;
+}
+
+#show-list-button{
+    margin-top: 20px;
+    color: blueviolet;
+    padding: 20px;
+    font-size: larger;
+    font-style: initial;
+    background-color: rgb(255, 255, 255);
+}
+.products {
+    float: left;
+    width: 33.33%;
+    padding: 60px;
+}
