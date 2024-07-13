@@ -1,179 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Rock+Salt');
+
+
+#nav_bar {
+    background-color: rgb(228, 216, 216);
+    font-family: Whitney;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 35px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    ;
+    font-size: 14px;
+    line-height: 20px;
+    color: #545766;
+    font-weight: bolder;
+}
+
+html,
+body,
+section {
+    height: 100%;
+}
+
+
 body {
-    background-color: rgb(43, 43, 43);
-    background: url("Common Files/image/create1.jpeg");
+    color: #fff;
+    text-align: center;
+
+}
+
+.xop-container {
+    display: flex;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.xop-left {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0.10)), url("Common Files/image/shebg.jpeg");
     background-size: cover;
     background-position: center;
-}
-#navbar {
-    background-color: rgb(253, 233, 242);
-        font-family: Whitney;
-        width: 100%;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        box-sizing: border-box;
-        padding: 35px;
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-        ;
-        font-size: 14px;
-        line-height: 20px;
-        color: #545766;
-        font-weight: bolder;
+    flex: 1;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
 }
 
-a {
+.xop-right {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url("Common Files/image/hebg.jpeg");
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.xop-left:hover,
+.xop-right:hover {
+    transform: scale(0.95);
+}
+
+
+.xop-left h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif cursive;
+    font-size: 3rem;
+}
+
+.xop-right h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif cursive;
+    font-size: 3rem;
+}
+
+.xop-button {
+    border-radius: 30px;
+    color: #fff;
+    background-color: #fcad26;
+    padding: 1.5%;
+    margin: 0.2%;
+    text-align: center;
     text-decoration: none;
-    color: black;
-    padding: 0;
-    margin: 0;
-}
-
-.mainn {
-    display: flex;
-    justify-content: center;
-}
-
-.main {
-    height: 100%;
-    width: 450px;
-    background-color: rgb(172, 172, 172);
-
-}
-
-.navbar {
-    background-color: white;
-        font-family: Whitney;
-        width: 100%;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        box-sizing: border-box;
-        padding: 35px;
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-        ;
-        font-size: 14px;
-        line-height: 20px;
-        color: #545766;
-        font-weight: bolder;
-
-}
-
-.navbar i,
-span {
-    margin: 1rem;
-}
-
-.navbar span {
-    font-weight: 700;
-}
-
-.create {
-    width: 100%;
-    height: 25vh;
-    background-color: white;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.she {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.she img {
-    height: 10rem;
-}
-
-.he {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.he img {
-    height: 10rem;
-}
-
-.create p {
-    padding: 0.2rem 1rem;
-    background-color: #c21bde;
-    border-radius: 1rem;
-    color: white;
-}
-
-.create p:hover {
-    background-color: #9909b3;
-}
-
-.scroll {
-    width: 100%;
-    height: 53vh;
-    background-color: white;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
-.scroll img {
-    height: 45vh;
-}
-
-.scroll2 {
-    display: flex;
-    align-items: center;
-
-}
-
-.scroll2 i {
-    margin: 1rem;
-}
-
-.bottom {
-    width: 100%;
-    height: 7vh;
-    background-color: white;
-    display: flex;
-    align-items: space-around;
-    justify-content: space-around;
-
-}
-
-.bottom p {
-    margin: 0;
-    font-size: 10px;
-}
-
-.logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-}
-
-.logo a:hover {
-    color: #f41cb4;
-}
-
-.other {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-
-}
-
-#myntra {
-    width: 2.7rem;
-
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 150px;
 }
