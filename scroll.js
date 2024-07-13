@@ -1,8 +1,7 @@
-document.getElementById('show-list-button').addEventListener('click', function() {
-    const itemList = document.getElementById('item-list');
-    if (itemList.classList.contains('hidden')) {
-        itemList.classList.remove('hidden');
-    } else {
-        itemList.classList.add('hidden');
-    }
+
+document.querySelectorAll('[id^=show-list-button]').forEach(button => {
+    button.addEventListener('click', function() {
+        const itemList = document.getElementById(button.id.replace('show-list-button', 'item-list'));
+        itemList.classList.toggle('hidden');
+    });
 });

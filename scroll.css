@@ -23,7 +23,7 @@ body{
     display: none;
 }
 
-#show-list-button{
+.show-list-button{
     margin-top: 20px;
     color: blueviolet;
     padding: 20px;
