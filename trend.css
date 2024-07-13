@@ -27,18 +27,31 @@ ul {
     margin: 0;
 }
 
-body{
+h3{
+    text-align: center;
+    color: blueviolet;
+    margin-top: 20px;
+}
+
+body {
     background-color: rgb(255, 255, 255);
     text-align: center;
 }
 
-.Outfit-1{
-    margin: 20px 20px 80px 30px;
-}
-.Outfit-2,.Outfit-3,.Outfit-4,.Outfit-5,.Outfit-6 {
+
+
+
+
+.Outfit-4,
+.Outfit-5 {
     margin-bottom: 80px;
 }
-.des,.des-1,.des3,.des4,.des5,.des6{
+
+
+
+
+.des4,
+.des5 {
     margin-bottom: 30px;
 }
 
@@ -46,7 +59,7 @@ body{
     display: none;
 }
 
-.show-list-button{
+.show-list-button {
     margin-top: 20px;
     color: blueviolet;
     padding: 20px;
@@ -54,17 +67,28 @@ body{
     font-style: initial;
     background-color: rgb(255, 255, 255);
 }
+
 .products {
     float: left;
     width: 33.33%;
     padding: 60px;
 }
+.rate-button{
+        margin-top:10px;
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        font-size: small;
+        font-style: initial;
+        background-color: rgb(255, 255, 255);
+}
 
-.rate-button {
-    margin-top: 10px;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    font-size: small;
-    font-style: initial;
-    background-color: rgb(255, 255, 255);
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    float: left;
+    width: 50%;
+    /* three boxes (use 25% for four, and 50% for two, etc) */
+    margin: 0;
 }
