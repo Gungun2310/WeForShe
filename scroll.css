@@ -33,17 +33,15 @@ body{
 }
 
 .Outfit-1{
-    margin: 110px 20px 80px 30px;
+    margin: 20px 20px 80px 30px;
 }
-.Outfit-2 {
+.Outfit-2,.Outfit-3,.Outfit-4,.Outfit-5,.Outfit-6 {
     margin-bottom: 80px;
 }
-.des-1{
+.des,.des-1,.des3,.des4,.des5,.des6{
     margin-bottom: 30px;
 }
-.des{
-    margin-bottom: 30px;
-}
+
 .hidden {
     display: none;
 }
