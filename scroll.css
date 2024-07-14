@@ -26,6 +26,9 @@ ul {
     padding: 0;
     margin: 0;
 }
+ul li a{
+    text-decoration: none;
+}
 
 body{
     background-color: rgb(255, 255, 255);
@@ -67,4 +70,37 @@ body{
     font-size: small;
     font-style: initial;
     background-color: rgb(255, 255, 255);
+}
+
+
+
+
+.product {
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+.rate-button {
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.rate-button .fa-heart {
+    color: gray;
+}
+.rate-button .fa-heart.filled {
+    color: purple;
+}
+.like-count {
+    margin-left: 10px;
+    font-size: 24px;
 }

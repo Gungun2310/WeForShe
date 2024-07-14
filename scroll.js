@@ -1,4 +1,3 @@
-
 document.querySelectorAll('[id^=show-list-button]').forEach(button => {
     button.addEventListener('click', function() {
         const itemList = document.getElementById(button.id.replace('show-list-button', 'item-list'));
@@ -27,3 +26,39 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const likeCounts = {};
+    const likedProducts = {};
+
+    const rateButtons = document.querySelectorAll('.rate-button');
+    const likeCountElements = document.querySelectorAll('.like-count');
+
+    // Initialize with random like counts
+    likeCountElements.forEach(element => {
+        const productId = element.getAttribute('data-product-id');
+        likeCounts[productId] = Math.floor(Math.random() * 100) + 1;
+        likedProducts[productId] = false;
+        element.textContent = likeCounts[productId];
+    });
+
+    rateButtons.forEach(button => {
+        const productId = button.getAttribute('data-product-id');
+
+        button.addEventListener('click', () => {
+            const heartIcon = button.querySelector('.fa-heart');
+
+            if (likedProducts[productId]) {
+                likeCounts[productId]--;
+                heartIcon.classList.remove('filled');
+                likedProducts[productId] = false;
+            } else {
+                likeCounts[productId]++;
+                heartIcon.classList.add('filled');
+                likedProducts[productId] = true;
+            }
+
+            document.querySelector(`.like-count[data-product-id="${productId}"]`).textContent = likeCounts[productId];
+        });
+    });
+});
