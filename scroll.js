@@ -62,3 +62,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
+
+// Example of adding an item to the cart
+const item = {
+    name: 'Product Name',
+    image: 'product-image-url',
+    price: 19.99 // Ensure price is a number
+};
+cart.push(item);
+localStorage.setItem('cart', JSON.stringify(cart));
