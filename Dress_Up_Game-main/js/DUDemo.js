@@ -262,3 +262,12 @@ const itemSelector = (button) => {
 		url + charaItem + '/' + itemList[character[charaItem]] + '.png)';
 	console.table(character);
 };
+
+
+//for upload
+
+
+        document.getElementById('uploadLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Your outfit has been successfully uploaded and is now live in the scroll section');
+        });
