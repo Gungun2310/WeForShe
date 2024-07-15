@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create and Store Outfit</title>
+    <style>
+        .outfit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .outfit img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outfit" id="outfit">
+        <img src="path/to/top.jpg" alt="Top">
+        <img src="path/to/bottom.jpg" alt="Bottom">
+        <img src="path/to/shoes.jpg" alt="Shoes">
+    </div>
+    <button onclick="saveOutfit()">Save Outfit</button>
+    <button onclick="loadOutfit()">Load Outfit</button>
+    <button onclick="uploadOutfit()">Upload Outfit</button>
+
+    <script>
+        function saveOutfit() {
+            const outfit = document.getElementById('outfit').innerHTML;
+            localStorage.setItem('savedOutfit', outfit);
+            alert('Outfit saved!');
+        }
+
+        function loadOutfit() {
+            const savedOutfit = localStorage.getItem('savedOutfit');
+            if (savedOutfit) {
+                document.getElementById('outfit').innerHTML = savedOutfit;
+                alert('Outfit loaded!');
+            } else {
+                alert('No outfit saved!');
+            }
+        }
+
+        function uploadOutfit() {
+            const savedOutfit = localStorage.getItem('savedOutfit');
+            if (savedOutfit) {
+                const newTab = window.open('', '_blank');
+                newTab.document.write('<html><head><title>Uploaded Outfit</title><style>.outfit{display:flex;flex-direction:column;align-items:center}.outfit img{width:100px;height:100px;margin:5px}</style></head><body><div class="outfit">' + savedOutfit + '</div></body></html>');
+                newTab.document.close();
+            } else {
+                alert('No outfit saved!');
+            }
+        }
+    </script>
+</body>
+</html>
