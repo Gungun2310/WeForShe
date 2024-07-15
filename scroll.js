@@ -27,6 +27,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const likeCounts = {};
+    const likedProducts = {};
+
+    const rateButtons = document.querySelectorAll('.rate-button');
+    const likeCountElements = document.querySelectorAll('.like-count');
+
+    // Initialize with specific like counts
+    likeCountElements.forEach((element, index) => {
+        const productId = element.getAttribute('data-product-id');
+        
+        if (index === 0) {
+            likeCounts[productId] = 0;  // Set the like count of the first product to 0
+        } else {
+            likeCounts[productId] = Math.floor(Math.random() * 100) + 1;  // Random like count for other products
+        }
+        
+        likedProducts[productId] = false;
+        element.textContent = likeCounts[productId];
+    });
+
+    rateButtons.forEach(button => {
+        const productId = button.getAttribute('data-product-id');
+
+        button.addEventListener('click', () => {
+            const heartIcon = button.querySelector('.fa-heart');
+
+            if (likedProducts[productId]) {
+                likeCounts[productId]--;
+                heartIcon.classList.remove('filled');
+                likedProducts[productId] = false;
+            } else {
+                likeCounts[productId]++;
+                heartIcon.classList.add('filled');
+                likedProducts[productId] = true;
+            }
+
+            document.querySelector(`.like-count[data-product-id="${productId}"]`).textContent = likeCounts[productId];
+        });
+    });
+});
 
 
 
