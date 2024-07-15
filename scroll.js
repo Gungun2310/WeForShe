@@ -34,10 +34,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const rateButtons = document.querySelectorAll('.rate-button');
     const likeCountElements = document.querySelectorAll('.like-count');
 
-    // Initialize with random like counts
-    likeCountElements.forEach(element => {
+    // Initialize with specific like counts
+    likeCountElements.forEach((element, index) => {
         const productId = element.getAttribute('data-product-id');
-        likeCounts[productId] = Math.floor(Math.random() * 100) + 1;
+        
+        if (index === 0) {
+            likeCounts[productId] = 0;  // Set the like count of the first product to 0
+        } else {
+            likeCounts[productId] = Math.floor(Math.random() * 100) + 1;  // Random like count for other products
+        }
+        
         likedProducts[productId] = false;
         element.textContent = likeCounts[productId];
     });
@@ -62,3 +68,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
+
+
+
+
